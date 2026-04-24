@@ -40,7 +40,11 @@ data/labels/val/*
 # Jupyter
 .ipynb_checkpoints/
 
-# Nuvoton local dependencies
+# External repos — clone fresh using README instructions
 Library/
 ThirdParty/
 repos/
+
+# Un-ignore our models folder
+!models/
+!models/*
