@@ -1,0 +1,46 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Training inputs
+local_inputs/
+
+# Training outputs
+runs/
+outputs/
+
+# Large artifacts
+*.pt
+!EmKnightBest.pt
+*.onnx
+*.tflite
+!YOLOv8n-elevator-od.tflite
+*.mp4
+*.mov
+*.npy
+
+# Local raw data
+data/raw_videos/
+data/raw_photos/
+
+# Dataset contents (keep structure only)
+data/images/train/*
+!data/images/train/.gitkeep
+data/images/val/*
+!data/images/val/.gitkeep
+data/labels/train/*
+!data/labels/train/.gitkeep
+data/labels/val/*
+!data/labels/val/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Nuvoton local dependencies
+Library/
+ThirdParty/
+repos/

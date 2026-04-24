@@ -1,0 +1,7 @@
+path: C:\Users\jimmy\Desktop\Nuvoton\Nuvoton-Team-2\data
+train: images\train
+val: images\val
+test: images\val
+
+names:
+  0: person
