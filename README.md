@@ -82,6 +82,11 @@ python -m pip install .[export]
 
 ### 4. Run validation
 
+> ⚠️ Before running, open `data/dataset.yaml` and update the `path` field to point to your local copy of the dataset images and labels:
+> ```yaml
+> path: C:\path\to\your\local\data  # update this per machine
+> ```
+
 From inside `repos/ML_YOLO/yolov8_ultralytics/`:
 
 ```bash
