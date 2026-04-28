@@ -26,7 +26,7 @@ Nuvoton-Team/
 │   ├── best_full_integer_quant.tflite
 │   └── TristaOverhead200epBest_full_integer_quant_vela.tflite
 ├── repos/
-│   ├── m55m1-ElevatorCounting-YOLOv8n
+│   ├── m55m1-ElevatorCounting-YOLOv8n/
 └── README.md
 ```
 
