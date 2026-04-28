@@ -256,7 +256,7 @@ The board reads the model from the SD card at runtime at path `"0:\\YOLOv8n-elev
 
 **D. Build and flash**
 
-Open the Keil project from (`m55m1-ElevatorCounting-YOLOv8n`) and run build + flash.
+Open the Keil project from (`repos/m55m1-ElevatorCounting-YOLOv8n/KEIL`) and run build + flash.
 
 ---
 
@@ -273,7 +273,7 @@ cd ML_M55M1_SampleCode
 python install.py
 ```
 
-Once installed, configure the library paths in `KEIL/ObjectDetection.csolution.yml`:
+Once installed, configure the library paths in `repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/ObjectDetection.csolution.yml`:
 
 ```yaml
 - BSP_PATH: "C:/Library"
