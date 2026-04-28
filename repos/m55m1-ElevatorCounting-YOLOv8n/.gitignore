@@ -1,0 +1,4 @@
+__pycache__
+yolov8_ultralytics/runs/train
+yolov8_ultralytics/saved_model
+yolov8_ultralytics/vela/generated/*

@@ -43,7 +43,8 @@ data/labels/val/*
 # External repos — clone fresh using README instructions
 Library/
 ThirdParty/
-repos/
+repos/*
+!repos/m55m1-ElevatorCounting-YOLOv8n/
 
 # Un-ignore our models folder
 !models/

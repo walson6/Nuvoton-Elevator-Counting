@@ -1,0 +1,163 @@
+project:
+  packs:
+    - pack: Nuvoton::NuMicroM55_DFP@^1.0.1
+  setups:
+    - setup: Options for ObjectDetection
+      processor:
+        fpu: dp
+        mve: fp
+        endian: little
+        trustzone: "off"
+      add-path:
+        - $BSP_PATH$/CMSIS/Core/Include
+        - $BSP_PATH$/Device/Nuvoton/M55M1/Include
+        - $BSP_PATH$/CMSIS/DSP/Include
+        - $BSP_PATH$/StdDriver/inc
+        - $BSP_PATH$/StdDriver/inc/npu
+        - $TP_PATH$/openmv/omv/imlib
+        - $TP_PATH$/openmv/omv/alloc
+        - $TP_PATH$/openmv/omv/common
+        - $TP_PATH$/openmv/omv/Lib
+        - $TP_PATH$/tflite_micro
+        - $TP_PATH$/tflite_micro/_deps/tensorflow-flatbuffers-src/include
+        - $TP_PATH$/ml-embedded-evaluation-kit/source/application/api/common/include
+        - $TP_PATH$/ml-embedded-evaluation-kit/source/log/include
+        - $TP_PATH$/ml-embedded-evaluation-kit/source/math/include
+        - $TP_PATH$/ml-embedded-evaluation-kit/source/application/main/include
+        - $TP_PATH$/ml-embedded-evaluation-kit/source/profiler/include
+        - ../Device/include
+        - ../Model/include
+        - ../NPU/include
+        - ../Pattern/include
+        - ../ProfilerCounter/include
+        - ..
+        - $TP_PATH$/tflite_micro/_deps/tensorflow-gemlowp-src
+        - $TP_PATH$/FatFs/source
+      debug: "on"
+      define:
+        - NVT_VECTOR_ON_FLASH
+        - TF_LITE_STATIC_MEMORY
+        - ARM_MATH_DSP
+        - ARM_NPU
+        - ACTIVATION_BUF_SZ: "0x00100000"
+      misc:
+        - C:
+            - -std=c11
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Wno-packed
+            - -Wno-missing-variable-declarations
+            - -Wno-missing-prototypes
+            - -Wno-missing-noreturn
+            - -Wno-sign-conversion
+            - -Wno-nonportable-include-path
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++17
+            - -fno-exceptions
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --diag_suppress=6314
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: M55M1.scatter
+  groups:
+    - group: CMSIS
+      files:
+        - file: $BSP_PATH$/Device/Nuvoton/M55M1/Source/startup_M55M1.c
+        - file: $BSP_PATH$/Device/Nuvoton/M55M1/Source/system_M55M1.c
+    - group: Driver
+      files:
+        - file: $BSP_PATH$/StdDriver/src/uart.c
+        - file: $BSP_PATH$/StdDriver/src/retarget.c
+        - file: $BSP_PATH$/StdDriver/src/ccap.c
+        - file: $BSP_PATH$/StdDriver/src/clk.c
+        - file: $BSP_PATH$/StdDriver/src/sys.c
+        - file: $BSP_PATH$/StdDriver/src/gpio.c
+        - file: $BSP_PATH$/StdDriver/src/npu/ethosu_device_u55_u65.c
+        - file: $BSP_PATH$/StdDriver/src/npu/ethosu_driver.c
+        - file: $BSP_PATH$/StdDriver/src/npu/ethosu_pmu.c
+        - file: $BSP_PATH$/StdDriver/src/ebi.c
+        - file: $BSP_PATH$/StdDriver/src/spim_hyper.c
+        - file: $BSP_PATH$/StdDriver/src/sdh.c
+        - file: $BSP_PATH$/StdDriver/src/spi.c
+        - file: $BSP_PATH$/StdDriver/src/hsusbd.c
+        - file: $BSP_PATH$/StdDriver/src/pdma.c
+    - group: Application
+      files:
+        - file: ../BoardInit.cpp
+        - file: ../main.cpp
+        - file: ../mpu_config_M55M1.h
+        - file: ../ModelFileReader.c
+        - file: ../YOLOv8nODPostProcessing.cpp
+    - group: Lib
+      files:
+        - file: $BSP_PATH$/CMSIS/Lib/KEIL/cmsis_dsp.lib
+        - file: $TP_PATH$/tflite_micro/Lib/tflu.lib
+        - file: $BSP_PATH$/CMSIS/Lib/KEIL/cmsis_nn.lib
+        - file: $TP_PATH$/openmv/omv/Lib/omv.lib
+    - group: Model
+      files:
+        - file: ../Model/YOLOv8nODModel.cpp
+        - file: ../Model/Labels.cpp
+    - group: ArmMLApi
+      files:
+        - file: $TP_PATH$/ml-embedded-evaluation-kit/source/application/api/common/source/Model.cc
+        - file: $TP_PATH$/ml-embedded-evaluation-kit/source/application/api/common/source/TensorFlowLiteMicro.cc
+        - file: $TP_PATH$/ml-embedded-evaluation-kit/source/math/PlatformMath.cc
+        - file: $TP_PATH$/ml-embedded-evaluation-kit/source/profiler/Profiler.cc
+    - group: NPU
+      files:
+        - file: ../NPU/ethosu_cpu_cache.c
+        - file: ../NPU/ethosu_npu_init.c
+        - file: ../NPU/ethosu_profiler.c
+    - group: ProfilerCounter
+      files:
+        - file: ../ProfilerCounter/pmu_counter.c
+    - group: Device
+      files:
+        - file: ../Device/ImageSensor/ImageSensor.c
+        - file: ../Device/ImageSensor/Sensor/Sensor_HM1055.c
+        - file: ../Device/ImageSensor/Sensor/SWI2C.c
+        - file: ../Device/Display/Display.c
+        - file: ../Device/Display/LCD/LCD_FSA506.c
+        - file: ../Device/Display/Font8_16.c
+        - file: ../Device/HyperRAM/hyperram_code.c
+        - file: ../Device/SDCard/sdglue.c
+        - file: ../Device/Display/LCD/LCD_ILI9341.c
+        - file: ../Device/UVC/descriptors.c
+        - file: ../Device/UVC/UVC.c
+        - file: ../Device/Display/LCD/LCD_LT7381.c
+        - file: ../Device/Display/drv_pdma.c
+        - file: $BSP_PATH$/Storage/diskio_SDH.c
+    - group: FatFS
+      files:
+        - file: $TP_PATH$/FatFs/source/ff.c
+        - file: $TP_PATH$/FatFs/source/ffunicode.c
+    - group: Pattern
+      files:
+        - file: ../Pattern/car.cpp
+        - file: ../Pattern/dinner.cpp
+        - file: ../Pattern/InputFiles.cpp

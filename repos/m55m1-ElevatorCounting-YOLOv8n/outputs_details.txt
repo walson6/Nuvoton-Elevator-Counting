@@ -1,0 +1,25 @@
+--- Output Tensor Details ---
+Index 0: name='PartitionedCall:4'
+  Shape: [  1 144   1]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 16
+Index 1: name='PartitionedCall:1'
+  Shape: [  1 144  64]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 15
+Index 2: name='PartitionedCall:5'
+  Shape: [ 1 36  1]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 14
+Index 3: name='PartitionedCall:3'
+  Shape: [  1 576   1]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 13
+Index 4: name='PartitionedCall:0'
+  Shape: [  1 576  64]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 12
+Index 5: name='PartitionedCall:2'
+  Shape: [ 1 36 64]
+  DType: <class 'numpy.float32'>
+  TensorIndex: 11

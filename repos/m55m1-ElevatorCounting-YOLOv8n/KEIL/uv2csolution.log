@@ -1,0 +1,56 @@
+1 out of 1 target(s) converted
+Created solution: //wsl.localhost/Debian/home/bence/m55m1-ElevatorCounting-YOLOv8n/KEIL/ObjectDetection.csolution.yml
+With projects:
+- //wsl.localhost/Debian/home/bence/m55m1-ElevatorCounting-YOLOv8n/KEIL/ObjectDetection.cproject.yml
+Error: 0 error(s), 47 warning(s):
+Warnings:
+	For target "ObjectDetection" file '//wsl.localhost/Debian/Library/CMSIS/Core/Include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/Library/Device/Nuvoton/M55M1/Include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/Library/CMSIS/DSP/Include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/Library/StdDriver/inc' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/Library/StdDriver/inc/npu' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/openmv/omv/imlib' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/openmv/omv/alloc' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/openmv/omv/common' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/openmv/omv/Lib' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/tflite_micro' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/tflite_micro/_deps/tensorflow-flatbuffers-src/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/log/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/math/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/application/main/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/profiler/include' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/tflite_micro/_deps/tensorflow-gemlowp-src' does not exists
+	For target "ObjectDetection" file '//wsl.localhost/Debian/ThirdParty/FatFs/source' does not exists
+	The target "ObjectDetection" is configured with following user commands which should be run manually:
+            After Build/Rebuild
+                fromelf --bin ".\Objects\@L.axf" --output ".\release\@L.bin"
+
+	 file '//wsl.localhost/Debian/Library/Device/Nuvoton/M55M1/Source/startup_M55M1.c' does not exists
+	 file '//wsl.localhost/Debian/Library/Device/Nuvoton/M55M1/Source/system_M55M1.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/uart.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/retarget.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/ccap.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/clk.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/sys.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/gpio.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/npu/ethosu_device_u55_u65.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/npu/ethosu_driver.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/npu/ethosu_pmu.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/ebi.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/spim_hyper.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/sdh.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/spi.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/hsusbd.c' does not exists
+	 file '//wsl.localhost/Debian/Library/StdDriver/src/pdma.c' does not exists
+	 file '//wsl.localhost/Debian/Library/CMSIS/Lib/KEIL/cmsis_dsp.lib' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/tflite_micro/Lib/tflu.lib' does not exists
+	 file '//wsl.localhost/Debian/Library/CMSIS/Lib/KEIL/cmsis_nn.lib' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/openmv/omv/Lib/omv.lib' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/source/Model.cc' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/source/TensorFlowLiteMicro.cc' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/math/PlatformMath.cc' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/ml-embedded-evaluation-kit/source/profiler/Profiler.cc' does not exists
+	 file '//wsl.localhost/Debian/Library/Storage/diskio_SDH.c' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/FatFs/source/ff.c' does not exists
+	 file '//wsl.localhost/Debian/ThirdParty/FatFs/source/ffunicode.c' does not exists

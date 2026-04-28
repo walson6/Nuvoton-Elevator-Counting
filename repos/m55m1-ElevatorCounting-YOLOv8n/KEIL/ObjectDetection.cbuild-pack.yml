@@ -1,0 +1,5 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: Nuvoton::NuMicroM55_DFP@1.0.2
+      selected-by-pack:
+        - Nuvoton::NuMicroM55_DFP@^1.0.1
