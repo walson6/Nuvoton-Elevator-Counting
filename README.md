@@ -25,10 +25,12 @@ Nuvoton-Team/
 │   ├── YOLOv8n-elevator-od.tflite
 │   ├── best_full_integer_quant.tflite
 │   └── TristaOverhead200epBest_full_integer_quant_vela.tflite
+├── repos/
+│   ├── m55m1-ElevatorCounting-YOLOv8n
 └── README.md
 ```
 
-> `repos/`, `Library/`, and `ThirdParty/` are not committed — see setup steps below to get them.
+> `Library/`, and `ThirdParty/` are not committed — see setup steps below to get them.
 
 ---
 
@@ -235,13 +237,6 @@ vela\generated\YourCheckpoint_full_integer_quant_vela.tflite
 
 **B. Add to the firmware repo (for Keil to build)**
 
-Clone Bence's repo if you haven't already:
-
-```bash
-cd repos
-git clone https://github.com/bencejdanko/m55m1-ElevatorCounting-YOLOv8n.git
-```
-
 Copy and rename the Vela `.tflite` to the expected filename:
 
 ```
@@ -261,7 +256,7 @@ The board reads the model from the SD card at runtime at path `"0:\\YOLOv8n-elev
 
 **D. Build and flash**
 
-Open the Keil project from Bence's repo (`m55m1-ElevatorCounting-YOLOv8n`) and run build + flash.
+Open the Keil project from (`m55m1-ElevatorCounting-YOLOv8n`) and run build + flash.
 
 ---
 
