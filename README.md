@@ -1,8 +1,8 @@
-# SJSU AI & ML Club — Nuvoton
+# SJSU AI & ML Club - Nuvoton
 
 **Edge AI People Counting on the Nuvoton M55M1 EVB**
 
-Deploy a real-time headcount system using a top-down camera and a model accelerated by the Ethos-U55 NPU. All inference runs locally on-device — no cloud or external storage.
+Deploy a real-time headcount system using a top-down camera and a model accelerated by the Ethos-U55 NPU. All inference runs locally on-device. No cloud or external storage.
 
 ## Goals
 
@@ -30,21 +30,40 @@ Nuvoton-Team/
 └── README.md
 ```
 
-> `Library/`, and `ThirdParty/` are not committed — see setup steps below to get them.
+> `Library/` and `ThirdParty/` are not committed. See setup steps below to get them.
 
 ---
 
 ## Resources
 
-- [ML_YOLO Repo](https://github.com/OpenNuvoton/ML_YOLO) — training, export, and quantization pipeline
-- [ML_M55M1_SampleCode](https://github.com/OpenNuvoton/ML_M55M1_SampleCode) — sample M55M1 ML application reference
-- [M55M1 BSP](https://github.com/OpenNuvoton/M55M1BSP) — board support package for lower-level firmware integration
+- [ML_YOLO Repo](https://github.com/OpenNuvoton/ML_YOLO) - training, export, and quantization pipeline
+- [ML_M55M1_SampleCode](https://github.com/OpenNuvoton/ML_M55M1_SampleCode) - sample M55M1 ML application reference
+- [M55M1 BSP](https://github.com/OpenNuvoton/M55M1BSP) - board support package for lower-level firmware integration
 - [NuEdgeWise](https://github.com/OpenNuvoton/NuEdgeWise)
-- [bdanko/overhead-person-detection](https://huggingface.co/datasets/bdanko/overhead-person-detection) — overhead/top-down detection dataset used for initial training tests
 
 ---
 
-## Team Evaluation — Installation & Test
+## Dataset & Performance
+
+**Dataset Setup Guide & Information**
+
+For full instructions on downloading, structuring, and configuring the dataset for this project, see:
+https://github.com/harshakrishna15/Nuvoton_Model/blob/main/docs/DATASETS.md
+
+
+### Performance
+
+| Metric        | Value   | Description                                        |
+| ------------- | ------- | -------------------------------------------------- |
+| Precision (P) | `94.9%` | Positive prediction accuracy (low false positives) |
+| Recall (R)    | `94.1%` | Sensitivity / detection coverage                   |
+| mAP50         | `97.8%` | Mean Average Precision at IoU=0.50                 |
+| mAP50-95      | `68.6%` | Average mAP across thresholds                      |
+| FPS           | `22`    | Average FPS on M55M1                               |
+
+---
+
+## Team Evaluation - Installation & Test
 
 > This section is for reviewers evaluating the project. `EmKnightBest.pt` and all compiled model files are already included in the `models/` folder. No training or data download needed.
 
@@ -64,25 +83,9 @@ git clone https://github.com/OpenNuvoton/ML_YOLO.git
 cd ..
 ```
 
-Open Miniforge and run:
+See the [`yolov8_DG` Environment Setup](#yolov8_dg-environment-setup) section below for the full conda environment and package installation steps.
 
-```bash
-conda create --name yolov8_DG python=3.10
-conda activate yolov8_DG
-python -m pip install --upgrade pip setuptools
-python -m pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
-```
-
-> CPU-only machine? Check the [PyTorch install page](https://pytorch.org/get-started/locally/) for the correct command.
-
-### 3. Install the YOLOv8 package
-
-```bash
-cd repos/ML_YOLO/yolov8_ultralytics
-python -m pip install .[export]
-```
-
-### 4. Run validation
+### 3. Run validation
 
 > ⚠️ Before running, open `data/dataset.yaml` and update the `path` field to point to your local copy of the dataset images and labels:
 > ```yaml
@@ -99,16 +102,9 @@ python dg_val.py \
   --device cpu
 ```
 
-Expected output:
+Expected output: see [Performance](#performance) table above.
 
-| Metric    | Value   |
-| --------- | ------- |
-| Precision | `94.9%` |
-| Recall    | `94.1%` |
-| mAP50     | `97.8%` |
-| mAP50-95  | `68.6%` |
-
-### 5. Run visual inference (optional)
+### 4. Run visual inference (optional)
 
 ```bash
 python -c "
@@ -122,38 +118,15 @@ Results are saved to `runs/detect/predict/`.
 
 ---
 
-## M55M1 Elevator Counting with YOLOv8n
-
-People-counting from top-down elevator views. Traditional weight sensors can't distinguish between people and objects, leading to "ghost stops" (stopping when full) and safety risks. This project replaces guesswork with precise, real-time headcount data.
-
-Using the Nuvoton M55M1 and its Ethos-U55 NPU, the system runs optimized ML models directly on the device. It converts a top-down camera feed into a digital count without the latency or cost of cloud processing. 100% data privacy — all video processing stays local. Success is measured by achieving >95% accuracy and a smooth 15+ FPS.
-
-### Dataset
-
-- Dataset: [https://huggingface.co/datasets/bdanko/overhead-person-detection](https://huggingface.co/datasets/bdanko/overhead-person-detection)
-- Preparation scripts: [https://github.com/bencejdanko/prepare-overhead-person-detection](https://github.com/bencejdanko/prepare-overhead-person-detection)
-
-### Performance
-
-| Metric        | Value   | Description                                        |
-| ------------- | ------- | -------------------------------------------------- |
-| Precision (P) | `94.9%` | Positive prediction accuracy (low false positives) |
-| Recall (R)    | `94.1%` | Sensitivity / detection coverage                   |
-| mAP50         | `97.8%` | Mean Average Precision at IoU=0.50                 |
-| mAP50-95      | `68.6%` | Average mAP across thresholds                      |
-| FPS           | `22`    | Average FPS on M55M1                               |
-
----
-
 ## Export & Deployment Pipeline
 
 This section covers the full workflow from a trained `.pt` checkpoint to a Vela-compiled `.tflite` file running on the M55M1 board.
 
-> **Prerequisites:** Miniforge installed, `yolov8_DG` conda environment set up (see above), ML_YOLO cloned to `repos/ML_YOLO/`.
+> **Prerequisites:** Miniforge installed, `yolov8_DG` conda environment set up (see below), ML_YOLO cloned to `repos/ML_YOLO/`.
 
 > **Note:** Calibration data generation and INT8 accuracy validation are checkpoint- and dataset-specific. Refer to your checkpoint's training notes for those steps.
 
-### Step 1 — Place your `.pt` weights
+### Step 1 - Place your `.pt` weights
 
 Copy your trained weights file into `models/` and also into the working directory:
 
@@ -171,7 +144,7 @@ conda activate yolov8_DG
 
 ---
 
-### Step 2 — Export to ONNX
+### Step 2 - Export to ONNX
 
 ```bash
 python nu_export_tflite_int8.py \
@@ -182,7 +155,7 @@ python nu_export_tflite_int8.py \
 
 ---
 
-### Step 3 — Quantize (ONNX → TFLite INT8)
+### Step 3 - Quantize (ONNX → TFLite INT8)
 
 ```bash
 onnx2tf \
@@ -195,7 +168,7 @@ Output: `saved_model\YourCheckpoint_full_integer_quant.tflite`
 
 ---
 
-### Step 4 — Run Vela compilation
+### Step 4 - Run Vela compilation
 
 1. Move the quantized model into the Vela input directory:
 
@@ -222,7 +195,7 @@ Output: `vela\generated\YourCheckpoint_full_integer_quant_vela.tflite.cc`
 
 ---
 
-### Step 5 — Deploy to the M55M1 board
+### Step 5 - Deploy to the M55M1 board
 
 You now have a `*_vela.tflite` file. Do all three of the following:
 
@@ -288,7 +261,7 @@ Update these paths to match where your `Library` and `ThirdParty` folders were i
 
 This environment is required for all export, quantization, and Vela steps.
 
-Source: [OpenNuvoton/ML_YOLO — yolov8_ultralytics](https://github.com/OpenNuvoton/ML_YOLO)
+Source: [OpenNuvoton/ML_YOLO - yolov8_ultralytics](https://github.com/OpenNuvoton/ML_YOLO)
 
 ### 1. Create and activate the environment
 
@@ -324,7 +297,7 @@ This installs the full export-capable build of the DeGirum-modified Ultralytics 
 
 ---
 
-### Dataset Format
+## Dataset Format
 
 The `yolov8_DG` training scripts expect datasets in Ultralytics YOLO format with this structure:
 
@@ -360,7 +333,7 @@ nc: 1  # number of classes
 
 ---
 
-### Training
+## Training
 
 ```bash
 python dg_train.py \
@@ -380,3 +353,10 @@ python dg_val.py \
   --data "../../../data/dataset.yaml" \
   --img 192
 ```
+
+## Contributors
+- Bence Danko
+- Harsha Krishnaswamy
+- Jimmy Vu
+- Shrivaikunth Krishnakumar
+- Trista Chen
