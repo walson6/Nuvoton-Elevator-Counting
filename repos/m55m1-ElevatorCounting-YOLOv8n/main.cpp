@@ -118,7 +118,7 @@ static S_FRAMEBUF *get_inf_framebuf()
     return NULL;
 }
 
-#define IMAGE_DISP_UPSCALE_FACTOR 1
+#define IMAGE_DISP_UPSCALE_FACTOR 2
 #if defined(LT7381_LCD_PANEL)
 #define FONT_DISP_UPSCALE_FACTOR 2
 #else
@@ -287,6 +287,9 @@ int main()
 {
     /* Initialise the UART module to allow printf related functions (if using retarget) */
     BoardInit();
+		Display_Init();
+		printf("LCD: %lu x %lu\n", Disaplay_GetLCDWidth(), Disaplay_GetLCDHeight());
+
 
 	/* Copy model file from SD to HyperRAM*/
 	int32_t i32ModelSize;
@@ -527,51 +530,51 @@ int g_currentPersonCount = 0; // persistent state between frames
 		
         infFramebuf = get_inf_framebuf();
 
-        if (infFramebuf)
-        {
+		if (infFramebuf)
+		{
 			//post process
 
-#if defined(__PROFILE__)
-			u64StartCycle = pmu_get_systick_Count();
-#endif
-			postProcess.RunPostProcessing(
+		#if defined(__PROFILE__)
+					u64StartCycle = pmu_get_systick_Count();
+		#endif
+		postProcess.RunPostProcessing(
 				inputImgCols,
 				inputImgRows,
 				inputImgRows, // 1:1 scale so output is in 192px canvas coords
 				inputImgCols,
 				infFramebuf->results);
 
-			// Undo Letterbox: Scale back to 320x240 and remove pad
-			for (auto &det : infFramebuf->results) {
+		// Undo Letterbox: Scale back to 320x240 and remove pad
+		for (auto &det : infFramebuf->results) {
 				det.m_detectBox.y -= 24; 
 				det.m_detectBox.x = (det.m_detectBox.x * 5) / 3; // 320/192
 				det.m_detectBox.y = (det.m_detectBox.y * 5) / 3;
 				det.m_detectBox.w = (det.m_detectBox.w * 5) / 3;
 				det.m_detectBox.h = (det.m_detectBox.h * 5) / 3;
-			}
+		}
 
-#if defined(__PROFILE__)
-			u64EndCycle = pmu_get_systick_Count();
-			info("post processing cycles %llu \n", (u64EndCycle - u64StartCycle));
-#endif
+		#if defined(__PROFILE__)
+					u64EndCycle = pmu_get_systick_Count();
+					info("post processing cycles %llu \n", (u64EndCycle - u64StartCycle));
+		#endif
 
             //draw bbox and render
             /* Draw boxes. */
 			if(infFramebuf->results.size())
 			{
-#if defined(__PROFILE__)
-				u64StartCycle = pmu_get_systick_Count();
-#endif
-				g_currentPersonCount = DrawDetectBox(infFramebuf->results, &infFramebuf->frameImage, labels);
-#if defined(__PROFILE__)
-				u64EndCycle = pmu_get_systick_Count();
-				info("draw box cycles %llu \n", (u64EndCycle - u64StartCycle));
-#endif
+					#if defined(__PROFILE__)
+									u64StartCycle = pmu_get_systick_Count();
+					#endif
+									g_currentPersonCount = DrawDetectBox(infFramebuf->results, &infFramebuf->frameImage, labels);
+					#if defined(__PROFILE__)
+									u64EndCycle = pmu_get_systick_Count();
+									info("draw box cycles %llu \n", (u64EndCycle - u64StartCycle));
+					#endif
 			}
-            else 
-            {
-                g_currentPersonCount = 0; // reset for empty frames
-            }
+      else 
+      {
+					g_currentPersonCount = 0; // reset for empty frames
+      }
 
             // Process display image: grayscale center crop and black sides
             /*
@@ -611,10 +614,14 @@ int g_currentPersonCount = 0; // persistent state between frames
             //display result image
 #if defined (__USE_DISPLAY__)
             //Display image on LCD
-            sDispRect.u32TopLeftX = 0;
-            sDispRect.u32TopLeftY = 0;
-			sDispRect.u32BottonRightX = ((frameBuffer.w * IMAGE_DISP_UPSCALE_FACTOR) - 1);
-			sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) - 1);
+            const int X_OFFSET = 80;
+						const int Y_OFFSET = 0;
+
+						sDispRect.u32TopLeftX = X_OFFSET;
+						sDispRect.u32TopLeftY = Y_OFFSET;
+
+						sDispRect.u32BottonRightX = X_OFFSET + (320 * IMAGE_DISP_UPSCALE_FACTOR) - 1;
+						sDispRect.u32BottonRightY = Y_OFFSET + (240 * IMAGE_DISP_UPSCALE_FACTOR) - 1;
 
 #if defined(__PROFILE__)
             u64StartCycle = pmu_get_systick_Count();
@@ -674,37 +681,55 @@ int g_currentPersonCount = 0; // persistent state between frames
 
 #endif
 
-            u64PerfFrames ++;
-			if ((uint64_t) pmu_get_systick_Count() > u64PerfCycle)
-            {
-                info("Total inference rate: %llu\n", u64PerfFrames / EACH_PERF_SEC);
-#if defined (__USE_DISPLAY__)
-                sprintf(szDisplayText, "FPS: %llu | People: %d", u64PerfFrames / EACH_PERF_SEC, g_currentPersonCount);
-                //sprintf(szDisplayText,"Time %llu",(uint64_t) pmu_get_systick_Count() / (uint64_t)SystemCoreClock);
-                //info("Running %s sec \n", szDisplayText);
+      u64PerfFrames ++;
+			
+					static uint64_t last_cycle = pmu_get_systick_Count();
 
-                sDispRect.u32TopLeftX = 0;
-				sDispRect.u32TopLeftY = frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR;
-				sDispRect.u32BottonRightX = (frameBuffer.w);
-				sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) + (FONT_DISP_UPSCALE_FACTOR * FONT_HTIGHT) - 1);
+					uint64_t now = pmu_get_systick_Count();
+					uint64_t delta = now - last_cycle;
+					last_cycle = now;
 
-                Display_ClearRect(C_WHITE, &sDispRect);
-                Display_PutText(
-                    szDisplayText,
-                    strlen(szDisplayText),
-                    0,
-                    frameBuffer.h,
-                    C_BLUE,
-                    C_WHITE,
-                    false,
-					FONT_DISP_UPSCALE_FACTOR
-                );
-#endif
-                u64PerfCycle = (uint64_t)pmu_get_systick_Count() + (uint64_t)(SystemCoreClock * EACH_PERF_SEC);
-                u64PerfFrames = 0;
-			}
+					double fps = 0.0;
+					if (delta > 0)
+							fps = (double)SystemCoreClock / delta;
 
-            infFramebuf->eState = eFRAMEBUF_EMPTY;
+					info("Total inference rate: %f\n", fps);
+					#if defined (__USE_DISPLAY__)
+							sprintf(szDisplayText, "FPS: %.2f | People: %d", fps, g_currentPersonCount);
+							//sprintf(szDisplayText,"Time %llu",(uint64_t) pmu_get_systick_Count() / (uint64_t)SystemCoreClock);
+							//info("Running %s sec \n", szDisplayText);
+
+							sDispRect.u32TopLeftX = 0;
+							sDispRect.u32TopLeftY = frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR;
+							sDispRect.u32BottonRightX = (frameBuffer.w);
+							sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) + (FONT_DISP_UPSCALE_FACTOR * FONT_HTIGHT) - 1);
+
+							Display_ClearRect(C_WHITE, &sDispRect);
+													
+												
+							int text_len = strlen(szDisplayText);
+							int char_width = 8 * FONT_DISP_UPSCALE_FACTOR;   // approximate font width
+							int text_width = text_len * char_width;
+
+							int x = (frameBuffer.w * IMAGE_DISP_UPSCALE_FACTOR - text_width) / 2;
+							int y = 5; // small padding from top
+												
+												
+							Display_PutText(
+									szDisplayText,
+									strlen(szDisplayText),
+									x,
+									y,
+									C_BLUE,
+									C_WHITE,
+									false,
+									FONT_DISP_UPSCALE_FACTOR
+							);
+					#endif
+					u64PerfCycle = (uint64_t)pmu_get_systick_Count() + (uint64_t)(SystemCoreClock * EACH_PERF_SEC);
+					u64PerfFrames = 0;
+			
+      infFramebuf->eState = eFRAMEBUF_EMPTY;
 		}
 		
 		//Wait CCAP ready
@@ -771,7 +796,7 @@ int g_currentPersonCount = 0; // persistent state between frames
 		}
 
 	}
-	
+		
     return 0;
 }
 

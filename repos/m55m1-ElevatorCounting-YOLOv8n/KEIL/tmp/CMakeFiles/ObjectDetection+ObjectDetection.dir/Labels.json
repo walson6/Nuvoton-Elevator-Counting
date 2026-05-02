@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/CMakeFiles/ObjectDetection+ObjectDetection"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/CMakeFiles/ObjectDetection+ObjectDetection.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/CMakeFiles/ObjectDetection+ObjectDetection-complete.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-build.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-configure.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-database.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-download.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-executes.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-install.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-patch.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-test.rule"
+		},
+		{
+			"file" : "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ObjectDetection+ObjectDetection"
+		],
+		"name" : "ObjectDetection+ObjectDetection"
+	}
+}

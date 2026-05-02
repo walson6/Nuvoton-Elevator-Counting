@@ -24,10 +24,10 @@
 	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
 	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
 	.file	"LCD_LT7381.c"
-	.file	1 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team-2\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD\\../LCD.h"
+	.file	1 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD\\../LCD.h"
 	.file	2 "C:\\Users\\jimmy" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdint.h"
-	.file	3 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team-2\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD/LCD_LT7381.c"
-	.file	4 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team-2\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ccap_reg.h"
+	.file	3 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD/LCD_LT7381.c"
+	.file	4 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ccap_reg.h"
 	.section	.text.lt7381_write_reg,"ax",%progbits
 	.hidden	lt7381_write_reg                @ -- Begin function lt7381_write_reg
 	.globl	lt7381_write_reg
@@ -3733,7 +3733,7 @@ lt7381_send_pixels:
 .Lfunc_end5:
 	.size	lt7381_send_pixels, .Lfunc_end5-lt7381_send_pixels
 	.cfi_endproc
-	.file	5 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team-2\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD\\../drv_pdma.h"
+	.file	5 "C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" "../Device/Display/LCD\\../drv_pdma.h"
 	.cantunwind
 	.fnend
                                         @ -- End function
@@ -7600,287 +7600,287 @@ s_au16PDMALineBuf:
 .Linfo_string1:
 	.asciz	"../Device/Display/LCD\\LCD_LT7381.c" @ string offset=68
 .Linfo_string2:
-	.asciz	"C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team-2\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" @ string offset=103
+	.asciz	"C:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL" @ string offset=103
 .Linfo_string3:
-	.asciz	"g_s_WVGA_LT7381"               @ string offset=191
+	.asciz	"g_s_WVGA_LT7381"               @ string offset=189
 .Linfo_string4:
-	.asciz	"m_strName"                     @ string offset=207
+	.asciz	"m_strName"                     @ string offset=205
 .Linfo_string5:
-	.asciz	"char"                          @ string offset=217
+	.asciz	"char"                          @ string offset=215
 .Linfo_string6:
-	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=222
+	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=220
 .Linfo_string7:
-	.asciz	"m_eInputFormat"                @ string offset=242
+	.asciz	"m_eInputFormat"                @ string offset=240
 .Linfo_string8:
-	.asciz	"unsigned char"                 @ string offset=257
+	.asciz	"unsigned char"                 @ string offset=255
 .Linfo_string9:
-	.asciz	"eLCD_INPUT_RGB565"             @ string offset=271
+	.asciz	"eLCD_INPUT_RGB565"             @ string offset=269
 .Linfo_string10:
-	.asciz	"eLCD_INPUT_RGB888"             @ string offset=289
+	.asciz	"eLCD_INPUT_RGB888"             @ string offset=287
 .Linfo_string11:
-	.asciz	"E_LCD_INPUT_FORMAT"            @ string offset=307
+	.asciz	"E_LCD_INPUT_FORMAT"            @ string offset=305
 .Linfo_string12:
-	.asciz	"m_u16Width"                    @ string offset=326
+	.asciz	"m_u16Width"                    @ string offset=324
 .Linfo_string13:
-	.asciz	"unsigned short"                @ string offset=337
+	.asciz	"unsigned short"                @ string offset=335
 .Linfo_string14:
-	.asciz	"uint16_t"                      @ string offset=352
+	.asciz	"uint16_t"                      @ string offset=350
 .Linfo_string15:
-	.asciz	"m_u16Height"                   @ string offset=361
+	.asciz	"m_u16Height"                   @ string offset=359
 .Linfo_string16:
-	.asciz	"m_pfnInit"                     @ string offset=373
+	.asciz	"m_pfnInit"                     @ string offset=371
 .Linfo_string17:
-	.asciz	"int"                           @ string offset=383
+	.asciz	"int"                           @ string offset=381
 .Linfo_string18:
-	.asciz	"int32_t"                       @ string offset=387
+	.asciz	"int32_t"                       @ string offset=385
 .Linfo_string19:
-	.asciz	"PFN_LCD_INIT"                  @ string offset=395
+	.asciz	"PFN_LCD_INIT"                  @ string offset=393
 .Linfo_string20:
-	.asciz	"m_pfnWriteReg"                 @ string offset=408
+	.asciz	"m_pfnWriteReg"                 @ string offset=406
 .Linfo_string21:
-	.asciz	"PFN_LCD_WRITE_REG"             @ string offset=422
+	.asciz	"PFN_LCD_WRITE_REG"             @ string offset=420
 .Linfo_string22:
-	.asciz	"m_pfnSetColumn"                @ string offset=440
+	.asciz	"m_pfnSetColumn"                @ string offset=438
 .Linfo_string23:
-	.asciz	"PFN_LCD_SET_COLUMN"            @ string offset=455
+	.asciz	"PFN_LCD_SET_COLUMN"            @ string offset=453
 .Linfo_string24:
-	.asciz	"m_pfnSetPage"                  @ string offset=474
+	.asciz	"m_pfnSetPage"                  @ string offset=472
 .Linfo_string25:
-	.asciz	"PFN_LCD_SET_PAGE"              @ string offset=487
+	.asciz	"PFN_LCD_SET_PAGE"              @ string offset=485
 .Linfo_string26:
-	.asciz	"m_pfnSentPixel"                @ string offset=504
+	.asciz	"m_pfnSentPixel"                @ string offset=502
 .Linfo_string27:
-	.asciz	"unsigned int"                  @ string offset=519
+	.asciz	"unsigned int"                  @ string offset=517
 .Linfo_string28:
-	.asciz	"uint32_t"                      @ string offset=532
+	.asciz	"uint32_t"                      @ string offset=530
 .Linfo_string29:
-	.asciz	"PFN_LCD_SENT_PIXEL"            @ string offset=541
+	.asciz	"PFN_LCD_SENT_PIXEL"            @ string offset=539
 .Linfo_string30:
-	.asciz	"m_pfnPutChar"                  @ string offset=560
+	.asciz	"m_pfnPutChar"                  @ string offset=558
 .Linfo_string31:
-	.asciz	"uint8_t"                       @ string offset=573
+	.asciz	"uint8_t"                       @ string offset=571
 .Linfo_string32:
-	.asciz	"PFN_LCD_PUT_CHAR"              @ string offset=581
+	.asciz	"PFN_LCD_PUT_CHAR"              @ string offset=579
 .Linfo_string33:
-	.asciz	"s_lcd_info"                    @ string offset=598
+	.asciz	"s_lcd_info"                    @ string offset=596
 .Linfo_string34:
-	.asciz	"S_LCD_INFO"                    @ string offset=609
+	.asciz	"S_LCD_INFO"                    @ string offset=607
 .Linfo_string35:
-	.asciz	"s_au16PDMALineBuf"             @ string offset=620
+	.asciz	"s_au16PDMALineBuf"             @ string offset=618
 .Linfo_string36:
-	.asciz	"s_PllSettings"                 @ string offset=638
+	.asciz	"s_PllSettings"                 @ string offset=636
 .Linfo_string37:
-	.asciz	"lpllOD_sclk"                   @ string offset=652
+	.asciz	"lpllOD_sclk"                   @ string offset=650
 .Linfo_string38:
-	.asciz	"lpllOD_cclk"                   @ string offset=664
+	.asciz	"lpllOD_cclk"                   @ string offset=662
 .Linfo_string39:
-	.asciz	"lpllOD_mclk"                   @ string offset=676
+	.asciz	"lpllOD_mclk"                   @ string offset=674
 .Linfo_string40:
-	.asciz	"lpllR_sclk"                    @ string offset=688
+	.asciz	"lpllR_sclk"                    @ string offset=686
 .Linfo_string41:
-	.asciz	"lpllR_cclk"                    @ string offset=699
+	.asciz	"lpllR_cclk"                    @ string offset=697
 .Linfo_string42:
-	.asciz	"lpllR_mclk"                    @ string offset=710
+	.asciz	"lpllR_mclk"                    @ string offset=708
 .Linfo_string43:
-	.asciz	"lpllN_mclk"                    @ string offset=721
+	.asciz	"lpllN_mclk"                    @ string offset=719
 .Linfo_string44:
-	.asciz	"lpllN_cclk"                    @ string offset=732
+	.asciz	"lpllN_cclk"                    @ string offset=730
 .Linfo_string45:
-	.asciz	"lpllN_sclk"                    @ string offset=743
+	.asciz	"lpllN_sclk"                    @ string offset=741
 .Linfo_string46:
-	.asciz	"lt7381_pll_t"                  @ string offset=754
+	.asciz	"lt7381_pll_t"                  @ string offset=752
 .Linfo_string47:
-	.asciz	"XI_4M"                         @ string offset=767
+	.asciz	"XI_4M"                         @ string offset=765
 .Linfo_string48:
-	.asciz	"XI_5M"                         @ string offset=773
+	.asciz	"XI_5M"                         @ string offset=771
 .Linfo_string49:
-	.asciz	"XI_8M"                         @ string offset=779
+	.asciz	"XI_8M"                         @ string offset=777
 .Linfo_string50:
-	.asciz	"XI_10M"                        @ string offset=785
+	.asciz	"XI_10M"                        @ string offset=783
 .Linfo_string51:
-	.asciz	"XI_12M"                        @ string offset=792
+	.asciz	"XI_12M"                        @ string offset=790
 .Linfo_string52:
-	.asciz	"XI_CNT"                        @ string offset=799
+	.asciz	"XI_CNT"                        @ string offset=797
 .Linfo_string53:
-	.asciz	"CTL"                           @ string offset=806
+	.asciz	"CTL"                           @ string offset=804
 .Linfo_string54:
-	.asciz	"PAR"                           @ string offset=810
+	.asciz	"PAR"                           @ string offset=808
 .Linfo_string55:
-	.asciz	"INTEN"                         @ string offset=814
+	.asciz	"INTEN"                         @ string offset=812
 .Linfo_string56:
-	.asciz	"INTSTS"                        @ string offset=820
+	.asciz	"INTSTS"                        @ string offset=818
 .Linfo_string57:
-	.asciz	"PARM"                          @ string offset=827
+	.asciz	"PARM"                          @ string offset=825
 .Linfo_string58:
-	.asciz	"RESERVE0"                      @ string offset=832
+	.asciz	"RESERVE0"                      @ string offset=830
 .Linfo_string59:
-	.asciz	"CWSP"                          @ string offset=841
+	.asciz	"CWSP"                          @ string offset=839
 .Linfo_string60:
-	.asciz	"CWS"                           @ string offset=846
+	.asciz	"CWS"                           @ string offset=844
 .Linfo_string61:
-	.asciz	"PKTSL"                         @ string offset=850
+	.asciz	"PKTSL"                         @ string offset=848
 .Linfo_string62:
-	.asciz	"PLNSL"                         @ string offset=856
+	.asciz	"PLNSL"                         @ string offset=854
 .Linfo_string63:
-	.asciz	"FRCTL"                         @ string offset=862
+	.asciz	"FRCTL"                         @ string offset=860
 .Linfo_string64:
-	.asciz	"STRIDE"                        @ string offset=868
+	.asciz	"STRIDE"                        @ string offset=866
 .Linfo_string65:
-	.asciz	"RESERVE1"                      @ string offset=875
+	.asciz	"RESERVE1"                      @ string offset=873
 .Linfo_string66:
-	.asciz	"FIFOTH"                        @ string offset=884
+	.asciz	"FIFOTH"                        @ string offset=882
 .Linfo_string67:
-	.asciz	"CMPADDR"                       @ string offset=891
+	.asciz	"CMPADDR"                       @ string offset=889
 .Linfo_string68:
-	.asciz	"LUMA_Y1_THD"                   @ string offset=899
+	.asciz	"LUMA_Y1_THD"                   @ string offset=897
 .Linfo_string69:
-	.asciz	"PKTSM"                         @ string offset=911
+	.asciz	"PKTSM"                         @ string offset=909
 .Linfo_string70:
-	.asciz	"PLNSM"                         @ string offset=917
+	.asciz	"PLNSM"                         @ string offset=915
 .Linfo_string71:
-	.asciz	"CURADDRP"                      @ string offset=923
+	.asciz	"CURADDRP"                      @ string offset=921
 .Linfo_string72:
-	.asciz	"CURADDRY"                      @ string offset=932
+	.asciz	"CURADDRY"                      @ string offset=930
 .Linfo_string73:
-	.asciz	"CURADDRU"                      @ string offset=941
+	.asciz	"CURADDRU"                      @ string offset=939
 .Linfo_string74:
-	.asciz	"CURADDRV"                      @ string offset=950
+	.asciz	"CURADDRV"                      @ string offset=948
 .Linfo_string75:
-	.asciz	"PKTBA0"                        @ string offset=959
+	.asciz	"PKTBA0"                        @ string offset=957
 .Linfo_string76:
-	.asciz	"RESERVE2"                      @ string offset=966
+	.asciz	"RESERVE2"                      @ string offset=964
 .Linfo_string77:
-	.asciz	"YBA"                           @ string offset=975
+	.asciz	"YBA"                           @ string offset=973
 .Linfo_string78:
-	.asciz	"UBA"                           @ string offset=979
+	.asciz	"UBA"                           @ string offset=977
 .Linfo_string79:
-	.asciz	"VBA"                           @ string offset=983
+	.asciz	"VBA"                           @ string offset=981
 .Linfo_string80:
-	.asciz	"RESERVE3"                      @ string offset=987
+	.asciz	"RESERVE3"                      @ string offset=985
 .Linfo_string81:
-	.asciz	"MDCTL"                         @ string offset=996
+	.asciz	"MDCTL"                         @ string offset=994
 .Linfo_string82:
-	.asciz	"MDTRG_WK"                      @ string offset=1002
+	.asciz	"MDTRG_WK"                      @ string offset=1000
 .Linfo_string83:
-	.asciz	"RESERVE4"                      @ string offset=1011
+	.asciz	"RESERVE4"                      @ string offset=1009
 .Linfo_string84:
-	.asciz	"MDTTH"                         @ string offset=1020
+	.asciz	"MDTTH"                         @ string offset=1018
 .Linfo_string85:
-	.asciz	"MDTSAD"                        @ string offset=1026
+	.asciz	"MDTSAD"                        @ string offset=1024
 .Linfo_string86:
-	.asciz	"RESERVE5"                      @ string offset=1033
+	.asciz	"RESERVE5"                      @ string offset=1031
 .Linfo_string87:
-	.asciz	"MDWOCTH"                       @ string offset=1042
+	.asciz	"MDWOCTH"                       @ string offset=1040
 .Linfo_string88:
-	.asciz	"MDWOC"                         @ string offset=1050
+	.asciz	"MDWOC"                         @ string offset=1048
 .Linfo_string89:
-	.asciz	"RESERVE6"                      @ string offset=1056
+	.asciz	"RESERVE6"                      @ string offset=1054
 .Linfo_string90:
-	.asciz	"MDWTH"                         @ string offset=1065
+	.asciz	"MDWTH"                         @ string offset=1063
 .Linfo_string91:
-	.asciz	"MDWSAD"                        @ string offset=1071
+	.asciz	"MDWSAD"                        @ string offset=1069
 .Linfo_string92:
-	.asciz	"CCAP_T"                        @ string offset=1078
+	.asciz	"CCAP_T"                        @ string offset=1076
 .Linfo_string93:
-	.asciz	"lt7381_write_reg"              @ string offset=1085
+	.asciz	"lt7381_write_reg"              @ string offset=1083
 .Linfo_string94:
-	.asciz	"reg"                           @ string offset=1102
+	.asciz	"reg"                           @ string offset=1100
 .Linfo_string95:
-	.asciz	"data"                          @ string offset=1106
+	.asciz	"data"                          @ string offset=1104
 .Linfo_string96:
-	.asciz	"lt7381_set_column"             @ string offset=1111
+	.asciz	"lt7381_set_column"             @ string offset=1109
 .Linfo_string97:
-	.asciz	"StartCol"                      @ string offset=1129
+	.asciz	"StartCol"                      @ string offset=1127
 .Linfo_string98:
-	.asciz	"EndCol"                        @ string offset=1138
+	.asciz	"EndCol"                        @ string offset=1136
 .Linfo_string99:
-	.asciz	"ActiveX"                       @ string offset=1145
+	.asciz	"ActiveX"                       @ string offset=1143
 .Linfo_string100:
-	.asciz	"lt7381_set_page"               @ string offset=1153
+	.asciz	"lt7381_set_page"               @ string offset=1151
 .Linfo_string101:
-	.asciz	"StartPage"                     @ string offset=1169
+	.asciz	"StartPage"                     @ string offset=1167
 .Linfo_string102:
-	.asciz	"EndPage"                       @ string offset=1179
+	.asciz	"EndPage"                       @ string offset=1177
 .Linfo_string103:
-	.asciz	"ActiveY"                       @ string offset=1187
+	.asciz	"ActiveY"                       @ string offset=1185
 .Linfo_string104:
-	.asciz	"lt7381_hw_reset"               @ string offset=1195
+	.asciz	"lt7381_hw_reset"               @ string offset=1193
 .Linfo_string105:
-	.asciz	"lt7381_wait_ready"             @ string offset=1211
+	.asciz	"lt7381_wait_ready"             @ string offset=1209
 .Linfo_string106:
-	.asciz	"i"                             @ string offset=1229
+	.asciz	"i"                             @ string offset=1227
 .Linfo_string107:
-	.asciz	"u16RegData"                    @ string offset=1231
+	.asciz	"u16RegData"                    @ string offset=1229
 .Linfo_string108:
-	.asciz	"lt7381_sw_reset"               @ string offset=1242
+	.asciz	"lt7381_sw_reset"               @ string offset=1240
 .Linfo_string109:
-	.asciz	"lt7381_initial_pll"            @ string offset=1258
+	.asciz	"lt7381_initial_pll"            @ string offset=1256
 .Linfo_string110:
-	.asciz	"lt7381_initial_sdram"          @ string offset=1277
+	.asciz	"lt7381_initial_sdram"          @ string offset=1275
 .Linfo_string111:
-	.asciz	"lt7381_initial_panel"          @ string offset=1298
+	.asciz	"lt7381_initial_panel"          @ string offset=1296
 .Linfo_string112:
-	.asciz	"lt7381_display_on"             @ string offset=1319
+	.asciz	"lt7381_display_on"             @ string offset=1317
 .Linfo_string113:
-	.asciz	"temp"                          @ string offset=1337
+	.asciz	"temp"                          @ string offset=1335
 .Linfo_string114:
-	.asciz	"lt7381_initial_main_window"    @ string offset=1342
+	.asciz	"lt7381_initial_main_window"    @ string offset=1340
 .Linfo_string115:
-	.asciz	"lt7381_vram_fifo_isfull"       @ string offset=1369
+	.asciz	"lt7381_vram_fifo_isfull"       @ string offset=1367
 .Linfo_string116:
-	.asciz	"nu_pdma_mempush"               @ string offset=1393
+	.asciz	"nu_pdma_mempush"               @ string offset=1391
 .Linfo_string117:
-	.asciz	"lt7381_put_char8x16"           @ string offset=1409
+	.asciz	"lt7381_put_char8x16"           @ string offset=1407
 .Linfo_string118:
-	.asciz	"lt7381_init"                   @ string offset=1429
+	.asciz	"lt7381_init"                   @ string offset=1427
 .Linfo_string119:
-	.asciz	"lt7381_send_pixels"            @ string offset=1441
+	.asciz	"lt7381_send_pixels"            @ string offset=1439
 .Linfo_string120:
-	.asciz	"x"                             @ string offset=1460
+	.asciz	"x"                             @ string offset=1458
 .Linfo_string121:
-	.asciz	"y"                             @ string offset=1462
+	.asciz	"y"                             @ string offset=1460
 .Linfo_string122:
-	.asciz	"c"                             @ string offset=1464
+	.asciz	"c"                             @ string offset=1462
 .Linfo_string123:
-	.asciz	"fColor"                        @ string offset=1466
+	.asciz	"fColor"                        @ string offset=1464
 .Linfo_string124:
-	.asciz	"bColor"                        @ string offset=1473
+	.asciz	"bColor"                        @ string offset=1471
 .Linfo_string125:
-	.asciz	"scaleUpFactory"                @ string offset=1480
+	.asciz	"scaleUpFactory"                @ string offset=1478
 .Linfo_string126:
-	.asciz	"r_y"                           @ string offset=1495
+	.asciz	"r_y"                           @ string offset=1493
 .Linfo_string127:
-	.asciz	"j"                             @ string offset=1499
+	.asciz	"j"                             @ string offset=1497
 .Linfo_string128:
-	.asciz	"r_x"                           @ string offset=1501
+	.asciz	"r_x"                           @ string offset=1499
 .Linfo_string129:
-	.asciz	"m"                             @ string offset=1505
+	.asciz	"m"                             @ string offset=1503
 .Linfo_string130:
-	.asciz	"pixels"                        @ string offset=1507
+	.asciz	"pixels"                        @ string offset=1505
 .Linfo_string131:
-	.asciz	"destWidth"                     @ string offset=1514
+	.asciz	"destWidth"                     @ string offset=1512
 .Linfo_string132:
-	.asciz	"destHeight"                    @ string offset=1524
+	.asciz	"destHeight"                    @ string offset=1522
 .Linfo_string133:
-	.asciz	"fixedColor"                    @ string offset=1535
+	.asciz	"fixedColor"                    @ string offset=1533
 .Linfo_string134:
-	.asciz	"byteLen"                       @ string offset=1546
+	.asciz	"byteLen"                       @ string offset=1544
 .Linfo_string135:
-	.asciz	"color"                         @ string offset=1554
+	.asciz	"color"                         @ string offset=1552
 .Linfo_string136:
-	.asciz	"pixels_x"                      @ string offset=1560
+	.asciz	"pixels_x"                      @ string offset=1558
 .Linfo_string137:
-	.asciz	"pixels_y"                      @ string offset=1569
+	.asciz	"pixels_y"                      @ string offset=1567
 .Linfo_string138:
-	.asciz	"srcWidth"                      @ string offset=1578
+	.asciz	"srcWidth"                      @ string offset=1576
 .Linfo_string139:
-	.asciz	"count"                         @ string offset=1587
+	.asciz	"count"                         @ string offset=1585
 .Linfo_string140:
-	.asciz	"h"                             @ string offset=1593
+	.asciz	"h"                             @ string offset=1591
 .Linfo_string141:
-	.asciz	"w"                             @ string offset=1595
+	.asciz	"w"                             @ string offset=1593
 .Linfo_string142:
-	.asciz	"pu16PDMAData"                  @ string offset=1597
+	.asciz	"pu16PDMAData"                  @ string offset=1595
 	.ident	"Component: Arm Compiler for Embedded 6.24 Tool: armclang [5f371800]"
 	.section	".note.GNU-stack","",%progbits
 	.eabi_attribute	30, 1	@ Tag_ABI_optimization_goals

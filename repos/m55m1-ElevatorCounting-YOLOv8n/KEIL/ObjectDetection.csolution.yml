@@ -2,9 +2,6 @@ solution:
   created-by: uv2csolution@1.6.0
   created-for: CMSIS-Toolbox@2.7.0
   compiler: AC6
-  variables:
-    - BSP_PATH: "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team-2/repos/M55M1BSP-3.01.003/Library"
-    - TP_PATH: "C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team-2/repos/M55M1BSP-3.01.003/ThirdParty"
   target-types:
     - type: ObjectDetection
       device: M55M1H2LJAE

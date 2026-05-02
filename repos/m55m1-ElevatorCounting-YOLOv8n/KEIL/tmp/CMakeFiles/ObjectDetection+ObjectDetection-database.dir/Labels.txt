@@ -1,0 +1,11 @@
+# Target labels
+ ObjectDetection+ObjectDetection
+# Source files and their labels
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/CMakeFiles/ObjectDetection+ObjectDetection-database
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/CMakeFiles/ObjectDetection+ObjectDetection-database.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-database.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-configure.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-patch.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-update.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-download.rule
+C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-mkdir.rule

@@ -1,5 +1,5 @@
 build-idx:
-  generated-by: csolution version 2.13.0
+  generated-by: csolution version 2.13.0+p3-g40b6564e
   csolution: ObjectDetection.csolution.yml
   cbuild-run: out/ObjectDetection+ObjectDetection.cbuild-run.yml
   tmpdir: tmp
@@ -11,6 +11,6 @@ build-idx:
       configuration: +ObjectDetection
       messages:
         info:
-          - ObjectDetection.cbuild-pack.yml - file is already up-to-date
-          - ObjectDetection+ObjectDetection.cbuild-run.yml - file is already up-to-date
-          - ObjectDetection+ObjectDetection.cbuild.yml - file is already up-to-date
+          - ObjectDetection.cbuild-pack.yml - file generated successfully
+          - ObjectDetection+ObjectDetection.cbuild-run.yml - file generated successfully
+          - ObjectDetection+ObjectDetection.cbuild.yml - file generated successfully

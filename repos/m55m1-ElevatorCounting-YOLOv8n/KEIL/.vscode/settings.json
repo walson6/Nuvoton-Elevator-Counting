@@ -1,6 +1,7 @@
 {
     "debug.hideSlowPreLaunchWarning": true,
     "clangd.arguments": [
-        "--compile-commands-dir=\\\\wsl.localhost\\Debian\\home\\bence\\m55m1-ElevatorCounting-YOLOv8n\\KEIL\\out\\ObjectDetection\\ObjectDetection"
-    ]
+        "--compile-commands-dir=c:\\Users\\jimmy\\Desktop\\Nuvoton\\Nuvoton-Team\\repos\\m55m1-ElevatorCounting-YOLOv8n\\KEIL\\out\\ObjectDetection\\ObjectDetection"
+    ],
+    "debug.showInStatusBar": "never"
 }

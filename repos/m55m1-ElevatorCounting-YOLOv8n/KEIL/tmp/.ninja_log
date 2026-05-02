@@ -1,0 +1,13 @@
+# ninja log v7
+59	236	7992917605483648	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-mkdir	a726cf5e934dec01
+59	236	7992917605483648	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-mkdir	a726cf5e934dec01
+237	369	7992917606799055	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-download	1cc088ed5f2e800
+237	369	7992917606799055	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-download	1cc088ed5f2e800
+369	535	7992917608429505	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-update	7913ca39d7084ea8
+369	535	7992917608429505	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-update	7913ca39d7084ea8
+535	648	7992917609598898	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-patch	ae64a1e5990aae70
+535	648	7992917609598898	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-patch	ae64a1e5990aae70
+649	14245	7992917745562223	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-configure	ea32d8d277418fc3
+649	14245	7992917745562223	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-configure	ea32d8d277418fc3
+14245	14877	7992917745671118	ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-database	2d90e2528a804dac
+14245	14877	7992917745671118	C:/Users/jimmy/Desktop/Nuvoton/Nuvoton-Team/repos/m55m1-ElevatorCounting-YOLOv8n/KEIL/tmp/ObjectDetection+ObjectDetection/src/ObjectDetection+ObjectDetection-stamp/ObjectDetection+ObjectDetection-database	2d90e2528a804dac
