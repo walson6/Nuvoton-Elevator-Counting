@@ -353,3 +353,10 @@ python dg_val.py \
   --data "../../../data/dataset.yaml" \
   --img 192
 ```
+
+## Contributors
+- Bence Danko
+- Harsha Krishnaswamy
+- Jimmy Vu
+- Shrivaikunth Krishnakumar
+- Trista Chen
